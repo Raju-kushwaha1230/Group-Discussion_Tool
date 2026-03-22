@@ -1,0 +1,60 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+@theme {
+  --color-brand-pink: #ff00ff;
+  --color-brand-purple: #8b5cf6;
+  --color-brand-dark: #0f172a;
+  --color-magenta-600: #d900d9;
+  
+  --radius-3xl: 1.5rem;
+  --radius-4xl: 2rem;
+  --radius-5xl: 2.5rem;
+
+  --font-sans: "Inter", "system-ui", "sans-serif";
+  --font-display: "Outfit", "Inter", "sans-serif";
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 font-sans antialiased h-screen overflow-hidden;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/70 backdrop-blur-md border border-white/30 shadow-xl shadow-slate-200/50;
+  }
+  
+  .glass-dark {
+    @apply bg-slate-900/40 backdrop-blur-lg border border-slate-700/30 shadow-2xl;
+  }
+
+  .btn-primary {
+    @apply bg-brand-pink hover:bg-magenta-600 text-white font-bold py-3 px-6 rounded-2xl transition-all active:scale-95 shadow-lg shadow-brand-pink/30;
+  }
+
+  .premium-card {
+    @apply bg-white rounded-4xl border border-slate-100 shadow-xl shadow-slate-200/40 p-6;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-200 rounded-full hover:bg-slate-300 transition-colors;
+}
