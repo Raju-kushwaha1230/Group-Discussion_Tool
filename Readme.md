@@ -2,6 +2,12 @@
 
 A real-time, scalable group discussion and workspace management platform. Built with the MERN stack (MongoDB, Express, React, Node.js), Socket.IO for real-time communication, and Redis for scalable WebSocket events.
 
+## Screenshots
+
+![Home](client/public/home.png)
+![Admin](client/public/admin.png)
+![WorkSpace](client/public/user.png)
+
 ## 🚀 Features
 
 - **Real-time Communication**: Instant messaging and live updates powered by Socket.IO.
